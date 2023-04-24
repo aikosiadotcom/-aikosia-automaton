@@ -81,6 +81,7 @@ class Runtime extends Ability{
 
         return {
             id:val,
+            rootPath:pluginPath,
             absPath:filePath,
             manifest:pkg["automaton"]
         };
@@ -138,7 +139,7 @@ class Runtime extends Ability{
         return absPath;
     }
 
-    async compile({absFilepath,writeToFile = true}){
+    async compile({absPath:absFilepath,writeToFile = true,rootPath}){
         const {code} = await babel.transformFileAsync(absFilepath, {
             cwd:__dirname,
             caller: {
@@ -167,7 +168,7 @@ class Runtime extends Ability{
         filenameToMjs.pop();
         filenameToMjs.push("mjs");
         filenameToMjs = filenameToMjs.join(".");
-        const compileFilePath = path.join(absFilepath,"..",".automaton",`${filenameToMjs}`);
+        const compileFilePath = path.join(rootPath,".automaton",`${filenameToMjs}`);
         await fsExtra.ensureFile(compileFilePath);
         await fsExtra.writeFile(compileFilePath,code);
 
@@ -188,7 +189,7 @@ class Runtime extends Ability{
         for(let i=0;i<automata.length;i++){
             await this.emitter.emit("validator",automata);
             
-            const compileFilePath = await this.compile({absFilepath:automata[i].absPath});
+            const compileFilePath = await this.compile(automata[i]);
 
             //TODO: jika server windows ada kemungkinan tidak bisa jalan
             const className = await import(`file:${path.sep}${path.sep}${compileFilePath}`);

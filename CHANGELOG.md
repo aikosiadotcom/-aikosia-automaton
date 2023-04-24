@@ -1,3 +1,7 @@
-#0.6.2
+# 0.6.2
 
-first release
+- first release
+
+# 0.7.1
+
+- fix bug .automaton not always on project root. example: **ROOT_DIR**/src/.automaton should be **ROOT_DIR**/.automaton
