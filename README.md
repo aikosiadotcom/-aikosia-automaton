@@ -1,8 +1,9 @@
-![Coverage](./badges/coverage-branches.svg)
-![Coverage](./badges/coverage-functions.svg)
-![Coverage](./badges/coverage-jest%20coverage.svg)
-![Coverage](./badges/coverage-lines.svg)
-![Coverage](./badges/coverage-statements.svg)
+![Branches](./badges/coverage-branches.svg)
+![Functions](./badges/coverage-functions.svg)
+![Lines](./badges/coverage-lines.svg)
+![Statements](./badges/coverage-statements.svg)
+![Jest coverage](./badges/coverage-jest%20coverage.svg)
+
 # AUTOMATON
 
 ## HOW AUTOMATON LOAD YOUR BOT?
