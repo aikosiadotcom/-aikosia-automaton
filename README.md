@@ -1,10 +1,15 @@
+
+<h1 align="center">AUTOMATON <br/><div><h6><i>A New Fun Way To Build Bot</i></h6></div></h1>
+
+<div align="center">
+    
 ![Branches](https://raw.githubusercontent.com/aikosiadotcom/automaton/main/badges/coverage-branches.svg?raw=true)
 ![Functions](https://raw.githubusercontent.com/aikosiadotcom/automaton/main/badges/coverage-functions.svg?raw=true)
 ![Lines](https://raw.githubusercontent.com/aikosiadotcom/automaton/main/badges/coverage-lines.svg?raw=true)
 ![Statements](https://raw.githubusercontent.com/aikosiadotcom/automaton/main/badges/coverage-statements.svg?raw=true)
 ![Jest coverage](https://raw.githubusercontent.com/aikosiadotcom/automaton/main/badges/coverage-jest%20coverage.svg?raw=true)
-
-# AUTOMATON
+    
+</div>
 
 ## HOW AUTOMATON LOAD YOUR BOT?
 
