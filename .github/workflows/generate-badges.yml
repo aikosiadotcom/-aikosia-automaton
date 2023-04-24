@@ -1,7 +1,7 @@
 name: generate-badges
 on: [push]
 jobs:
-  bump:
+  generate-badges:
     runs-on: ubuntu-latest
     steps:
 
