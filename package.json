@@ -4,6 +4,10 @@
   "description": "build your own bot with automaton",
   "main": "./src/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aikosiadotcom/automaton"
+  },
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
     "jsdoc": "jsdoc -a all -r ./src -d docs/jsdoc",
@@ -21,8 +25,7 @@
     "framework"
   ],
   "files": [
-    "src",
-    "badges"
+    "src"
   ],
   "author": "firman",
   "license": "MIT",
