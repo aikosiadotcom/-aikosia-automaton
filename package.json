@@ -11,8 +11,9 @@
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
     "jsdoc": "jsdoc -a all -r ./src -d docs/jsdoc",
-    "release": "cross-var git add * && git commit -m \"Release v$npm_package_version\"",
-    "test-ci": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --ci --coverage"
+    "release": "cross-var git pull origin && git add * && git commit -m \"Release $npm_package_version\"",
+    "test-ci": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --ci --coverage",
+    "get-version": "echo %npm_package_version%"
   },
   "keywords": [
     "aikosia",
