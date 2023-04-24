@@ -7,7 +7,6 @@ package-lock.json
 # documentation of jsdoc
 docs
 
-
 # Logs
 logs
 *.log
