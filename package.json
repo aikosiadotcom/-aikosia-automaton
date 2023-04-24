@@ -8,7 +8,7 @@
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
     "jsdoc": "jsdoc -a all -r ./src -d docs/jsdoc",
     "release": "np --no-2fa",
-    "test-ci": "jest --ci --coverage"
+    "test-ci": "npx jest --ci --coverage"
   },
   "keywords": [
     "aikosia",
