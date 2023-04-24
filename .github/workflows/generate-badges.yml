@@ -4,13 +4,17 @@ jobs:
   bump:
     runs-on: ubuntu-latest
     steps:
-    # Necessary to push the generated badges to the repo
+
     - name: Check out repository code
       uses: actions/checkout@v3
-    # Necessary to generate the coverage report.
-    # Make sure to add 'json-summary' to the coverageReporters in jest options
+      
+    - name: "Setup Node Js"
+      uses: actions/setup-node@v3
+      with:
+          node-version: '18'
+
     - name: Tests
-      run: yarn test-ci
+      run: npm run test-ci
       
     - name: Generating coverage badges
       uses: jpb06/jest-badges-action@latest
