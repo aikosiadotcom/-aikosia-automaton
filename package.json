@@ -1,7 +1,7 @@
 {
   "name": "@aikosia/automaton",
   "version": "0.7.0",
-  "description": "build your own bot with automaton",
+  "description": "a new fun way to build bot",
   "main": "./src/index.js",
   "type": "module",
   "repository": {
