@@ -1,6 +1,11 @@
-/automaton_modules/automaton-example/
+/automaton_modules/automaton-examples/
 /automaton_modules/automaton-boilerplate/
 /automaton_modules/automaton-cli/
 /automaton_modules/automaton-daemon/
 /automaton_modules/automaton-core/
 /automaton_modules/automaton-core/
+
+# still unsure to ignore this file
+package-lock.json 
+
+node_modules
