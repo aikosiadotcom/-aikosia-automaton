@@ -9,7 +9,7 @@
     "url": "https://github.com/aikosiadotcom/automaton"
   },
   "scripts": {
-    "release": "node ./script/release.js",
+    "release": "node ./release.js",
     "fix-release": "np --no-2fa"
   },
   "keywords": [
