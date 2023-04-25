@@ -9,3 +9,7 @@
 # 0.8.0
 
 - stable release
+
+# 0.8.1
+
+- add property 'db' to Ability Class where 'db' is supabase

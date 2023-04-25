@@ -3,11 +3,10 @@ import winston from "winston";
 
 class Logger{
     constructor(config){
-        const {supabase:supabaseConfig,winston:winstonConfig,logger:loggerConfig} = config ?? {};
-        const {url,secret,tableName} = supabaseConfig ?? {};
+        const {supabase:supabaseClient,winston:winstonConfig,logger:loggerConfig} = config ?? {};
         const {level,defaultMeta} = winstonConfig ?? {level:"info",defaultMeta:{projectKey:"",moduleKey:""}};
         const {projectKey,moduleKey} = defaultMeta;
-        const {console} = loggerConfig ?? {console:true};
+        const {console,tableName} = loggerConfig ?? {console:true, tableName: "winston_logs"};
 
         const transports = [];
 
@@ -15,12 +14,9 @@ class Logger{
             transports.push(new winston.transports.Console());
         }
         
-        if(supabaseConfig){
+        if(supabaseClient){
             transports.push(new WinstonSupabaseTransport({
-                supabase:{
-                    url:url,
-                    secret:secret
-                },
+                supabaseClient:supabaseClient,
                 tableName:tableName
               }))
         }

@@ -65,6 +65,12 @@ class Automaton extends Ability{
                 const response = await responsePromise;
                 return await response[responseType]();
             }
+
+            // //automatically close the page when there's no activity
+            // setTimeout(()=>{
+
+            // },60*60*1000);
+
             return page;
         });
 

@@ -5,6 +5,7 @@ import AbstractClassError from "./error/abstract_class_error.js";
 import EnvRequiredError from "./error/env_required_error.js";
 import * as dotenv from "dotenv";
 import envChecker from "node-envchecker";
+import { createClient } from '@supabase/supabase-js';
 
 /**
  * @external winston.Logger
@@ -30,6 +31,11 @@ class Ability{
      */
     emitter;
 
+    /**
+     * @type {supabase} 
+     */
+    db;
+
     constructor(config = {}){
         if(this.constructor == Ability){
             throw new AbstractClassError();
@@ -53,9 +59,21 @@ class Ability{
         if(Object.keys(supabaseConfig).length == 0){
             supabaseConfig = {
                 url:process.env.AUTOMATON_SUPABASE_URL,
-                secret:process.env.AUTOMATON_SUPABASE_KEY,
-                tableName:"winston_logs"
+                secret:process.env.AUTOMATON_SUPABASE_KEY
             }
+            this.db = createClient(supabaseConfig.url, supabaseConfig.secret,{
+                db: {
+                  schema: 'public',
+                },
+                auth: {
+                  autoRefreshToken: true,
+                  persistSession: true,
+                  detectSessionInUrl: true
+                },
+                global: {
+                  headers: {},
+                },
+            });
         }
 
         let winstonConfig = config.winston ?? {};
@@ -79,7 +97,7 @@ class Ability{
         this.emitter = new EventEmitter();
 
         this.logger = new Logger({
-            supabase:supabaseConfig,
+            supabase:this.db,
             winston:winstonConfig,
             loggerConfig:loggerConfig
         });

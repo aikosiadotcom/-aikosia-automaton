@@ -1,5 +1,4 @@
 import Transport from 'winston-transport';
-import { createClient } from '@supabase/supabase-js';
 
 /**
  * @external Transport
@@ -31,7 +30,7 @@ class WinstonSupabaseTransport extends Transport {
     constructor(options) {
         super(options);
 
-        if (!options.tableName || !options.supabase.url || !options.supabase.secret) {
+        if (!options.tableName || !options.supabaseClient) {
             throw new Error("WinstonSupabaseTransport Object Cannot Missing Options And Cannot Be created");
         }
 
@@ -43,19 +42,7 @@ class WinstonSupabaseTransport extends Transport {
 
         const tableName = options.tableName;
 
-        const supabaseClient = createClient(options.supabase.url, options.supabase.secret,{
-            db: {
-              schema: 'public',
-            },
-            auth: {
-              autoRefreshToken: true,
-              persistSession: true,
-              detectSessionInUrl: true
-            },
-            global: {
-              headers: {},
-            },
-        });
+        const supabaseClient = options.supabaseClient;
 
         this.logsTable = supabaseClient.from(tableName);
 
