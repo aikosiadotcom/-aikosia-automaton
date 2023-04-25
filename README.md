@@ -1,6 +1,6 @@
 # INTRODUCTION
 
-This project consist of submodules:
+This project consist of **Multi-repo** and will be checkout in folder automaton_modules:
 
 1. [CORE](https://github.com/aikosiadotcom/automaton-core#readme)
    
@@ -28,7 +28,17 @@ This project consist of submodules:
     npm install @aikosia/automaton-cli -g
     ```
 
+    of course, you can also install per project
+
+    ```
+    npm install @aikosia/automaton-cli
+    ```
+
 # DEVELOPING AUTOMATON LOCALLY
+
+This project using [META](https://github.com/mateodelnorte/meta) to form **Monorepo** for easy maintenance:
+
+if you interested, you can checkout using command:
 
 ```
 npm i -g meta
@@ -40,7 +50,7 @@ meta npm link --all
 npm link
 ```
 
-or, in one command:
+or, in single command:
 
 ```
 npm i -g meta && meta git clone https://github.com/aikosiadotcom/automaton.git && cd ./automaton && npm install && meta npm install && meta npm link --all && npm link
