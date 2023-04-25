@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "automaton-example": "https://github.com/aikosiadotcom/automaton-example",
+    "automaton-boilerplate": "https://github.com/aikosiadotcom/automaton-boilerplate",
+    "automaton-cli": "https://github.com/aikosiadotcom/automaton-cli",
+    "automaton-daemon": "https://github.com/aikosiadotcom/automaton-daemon",
+    "automaton-core": "https://github.com/aikosiadotcom/automaton-core"
+  }
+}

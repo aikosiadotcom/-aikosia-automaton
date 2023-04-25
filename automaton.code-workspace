@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "automaton-core"
+		},
+		{
+			"path": "automaton-daemon"
+		},
+		{
+			"path": "automaton-cli"
+		},
+		{
+			"path": "automaton-boilerplate"
+		},
+		{
+			"path": "automaton-example"
+		}
+	],
+	"settings": {
+		"workspace-terminals.auto": "multiRoot",
+		"workspace-terminals.switchTerminal": "fromWorkspaceTerminals",
+		"terminal.integrated.enablePersistentSessions": false,
+		"terminal.integrated.persistentSessionReviveProcess": "never"
+		
+	},
+	"extensions": {
+		"recommendations": [
+			"joshx.workspace-terminals"
+		]
+	}
+}
