@@ -2,13 +2,14 @@
   "name": "@aikosia/automaton",
   "version": "0.9.0",
   "description": "a new fun way to build bot",
-  "main": "./src/index.js",
+  "main": "./index.js",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/aikosiadotcom/automaton"
   },
   "scripts": {
+    "start":"node ./index.js",
     "release": "node ./release.js",
     "fix-release": "np --no-2fa"
   },
