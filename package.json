@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "node ./index.js",
-    "release": "node ./release.js",
-    "fix-release": "np --no-2fa"
+    "release": "meta exec \"npm run release\"",
+    "push": "meta git add * && meta git commit -m \"update\" && meta git push origin"
   },
   "keywords": [
     "aikosia",
@@ -29,7 +29,6 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "meta-npm": "^1.2.7",
-    "np": "^7.7.0",
     "read-pkg": "^8.0.0"
   }
 }
