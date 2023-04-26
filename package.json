@@ -10,8 +10,9 @@
   },
   "scripts": {
     "start": "node ./index.js",
-    "release": "meta exec \"npm run release\"",
-    "push": "meta git pull origin && meta git add * && meta git commit -m \"update\" && meta git push origin"
+    "release": "node ./release.js",
+    "push": "meta git pull origin && meta git add * && meta git commit -m \"update\" && meta git push origin",
+    "publish": "meta exec \"npm run release\""
   },
   "keywords": [
     "aikosia",
