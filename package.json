@@ -11,7 +11,7 @@
   "scripts": {
     "start": "node ./index.js",
     "release": "meta exec \"npm run release\"",
-    "push": "meta git add * && meta git commit -m \"update\" && meta git push origin"
+    "push": "meta git pull origin && meta git add * && meta git commit -m \"update\" && meta git push origin"
   },
   "keywords": [
     "aikosia",
