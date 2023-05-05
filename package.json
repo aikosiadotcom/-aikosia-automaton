@@ -1,7 +1,7 @@
 {
   "name": "@aikosia/automaton",
   "version": "0.9.0",
-  "description": "a new fun way to build bot",
+  "description": "A Framework For Developer To Build Shareable Bot",
   "main": "./index.js",
   "type": "module",
   "repository": {
@@ -17,12 +17,16 @@
   "keywords": [
     "aikosia",
     "automaton",
+    "automata",
     "automation",
     "bot",
     "puppeteer",
     "playwright",
     "chromium",
-    "framework"
+    "framework",
+    "deployment",
+    "infrastructure",
+    "shareable"
   ],
   "files": [],
   "author": "firman",

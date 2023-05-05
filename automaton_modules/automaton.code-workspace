@@ -20,12 +20,17 @@
 		"workspace-terminals.auto": "multiRoot",
 		"workspace-terminals.switchTerminal": "fromWorkspaceTerminals",
 		"terminal.integrated.enablePersistentSessions": false,
-		"terminal.integrated.persistentSessionReviveProcess": "never"
+		"terminal.integrated.persistentSessionReviveProcess": "never",
+		"docwriter.style": "JSDoc",
+		"docwriter.progress.trackMethods": true,
+		"docwriter.progress.trackFunctions": false,
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 		
 	},
 	"extensions": {
 		"recommendations": [
-			"joshx.workspace-terminals"
+			"joshx.workspace-terminals",
+			"roblourens.npm-link-status"
 		]
 	}
 }
